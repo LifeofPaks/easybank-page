@@ -1,4 +1,5 @@
 import './App.scss';
+import Articles from './components/Articles/Articles';
 import Footer from './components/Footer/Footer';
 import Hero from './components/Hero/Hero';
 import Main from './components/Main.jsx/Main';
@@ -10,6 +11,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <Main/>
+      <Articles/>
       <Footer/>
     </main>
   );

@@ -1,47 +1,84 @@
-@import '../../styles/Responsive.scss';
-@import '../../styles/Variables.scss';
+@import "../../styles/Responsive.scss";
+@import "../../styles/Variables.scss";
 
-.hero{
-    padding-inline: 10rem;
-    display: flex;
-    align-items: center;
-    background: $Light-Grayish-Blue;
-    gap: 5rem;
-    overflow-x: hidden;
-    position: absolute;
-    top: -5%;
+.hero {
+  padding-inline: 10rem;
+  display: flex;
+  align-items: center;
+  background: $Very-Light-Gray;
+  height: 73vh;
 
-    .left{
+  @include Mobile{
+        flex-direction: column-reverse;
+        padding-inline: 2rem;
+        overflow: hidden;
+        height: 90vh;
+  
+  }
 
-        h1{
-            font-size: 3.5rem;
-            font-weight: 300;
-            color: $Dark-Blue;
-            width: 500px;
-            margin-bottom: 2rem;
-        }
-        p{
-            width: 400px;
-            color: $Grayish-Blue;
-            line-height: 25px;
-            margin-bottom: 2rem;
+  .left {
+      width: 100%;
+
+    @include Mobile{
+        text-align: center;
+        height: 100%;
+      }
+  
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: $Dark-Blue;
+      width: 500px;
+      margin-bottom: 2rem;
+
+      @include Mobile{
+        width: 100%;
+        font-size: 2.5rem;
+      }
+
+    
+    }
+    p {
+      width: 400px;
+      color: $Grayish-Blue;
+      line-height: 25px;
+      margin-bottom: 2rem;
+
+      @include Mobile{
+        width: 100%;
+      }
+    }
+  }
+
+  .right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+   
+    .HeroBg{
+        position: absolute;
+        top: -43%;
+        transform: translateX(-12%);
+
+        @include Mobile{
+            width: 250%;
+            transform: translateX(-15%);
+            top: -98%;
         }
     }
 
-    .right{
-        position: relative;
-        // background-image: url(../../images/bg-intro-desktop.svg);
+    .heroImg{
+        position: absolute;
+        z-index: 40;
+        transform: translateX(13%);
+        top: -19%;
 
-        .heroImg{
-            transform: translateX(10%);
-            position: relative;
-            z-index: 2;
-        }
-
-        .HeroBg{
-            position: absolute;
-            top: -10%;
-            left: -20%;
+        @include Mobile{
+            width: 100%;
+            transform: translateX(-50%);
+            left: 50%;
+            top: -33%;
         }
     }
+  }
 }

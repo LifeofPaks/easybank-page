@@ -1,7 +1,8 @@
 import React from "react";
 import "./Hero.scss";
-import HeroImg from '../../images/image-mockups.png'
-import HeroBg from '../../images/bg-intro-desktop.svg'
+import HeroImg from "../../images/image-mockups.png";
+import HeroBg from "../../images/bg-intro-desktop.svg";
+import HeroBgMobile from "../../images/bg-intro-mobile.svg";
 
 const Hero = () => {
   return (
@@ -16,8 +17,8 @@ const Hero = () => {
         <button className="primaryBtn">Request Invite</button>
       </div>
       <div className="right">
-        <img src={HeroImg} alt="heroImg" className="heroImg"/>
-        <img src={HeroBg} alt="heroImg" className="HeroBg" />
+          <img src={HeroBg} alt="heroImg" className="HeroBg" />
+        <img src={HeroImg} alt="heroImg" className="heroImg" />
       </div>
     </section>
   );

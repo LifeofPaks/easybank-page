@@ -1,0 +1,88 @@
+@import '../../styles/Responsive.scss';
+@import '../../styles/Variables.scss';
+
+.main{
+    padding-inline: 10rem;
+    background: $Light-Grayish-Blue;
+    padding-block: 7rem;
+    position: relative;
+    z-index: 10;
+
+    @include Mobile{
+        padding-inline: 2rem;
+        padding-block: 2rem;
+    }
+
+    .infoInfo{
+        .intro{
+            width: 600px;
+
+            @include Mobile{
+                width: 100%;
+                text-align: center;
+              }
+    
+            h2{
+                font-weight: 300;
+                font-size: 2.5rem;
+                color: $Dark-Blue;
+                margin-bottom: 2rem;
+
+                @include Mobile{
+                    font-size: 2rem;
+                  }
+            }
+    
+            p{
+                color: $Grayish-Blue;
+                line-height: 25px;
+                margin-bottom: 5rem;
+
+                @include Mobile{
+                    font-size: 14px;
+                  }
+            }
+        }
+
+        .contentWrapper{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            @include Mobile{
+                flex-direction: column;
+                text-align: center;
+              }
+
+            img{
+                margin-bottom: 2rem;
+
+                @include Mobile{
+                    margin-bottom: 1.5rem;
+                  }
+            }
+
+            h3{
+                font-weight: 500;
+                font-size: 1.5rem;
+                color: $Dark-Blue;
+                margin-bottom: 2rem;
+
+                @include Mobile{
+                    font-size: 1.3rem;
+                  }
+            }
+            p{color: $Grayish-Blue;
+                line-height: 25px;
+
+                @include Mobile{
+                    font-size: 14px;
+                  }
+            }
+        }
+    }
+
+   .articles{
+    padding-top: 5rem;
+   }
+}

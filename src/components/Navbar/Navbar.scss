@@ -9,17 +9,65 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    z-index: 10;
+    z-index: 100;
+
+    padding-inline: 2rem;
 
     ul{
         display: flex;
         align-items: center;
         gap: 2rem;
 
+        @include Mobile{
+            position: absolute;
+            top: 5rem;
+            background: $White;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            flex-direction: column;
+            padding-block: 1rem;
+            display: none;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        &.show{
+            @include Mobile{
+                display: flex;
+            }
+
+        }
+
+
+
         li{
             color: $Grayish-Blue;
             text-transform: capitalize;
             cursor: pointer;
+            transition: .3s;
+
+            @include Mobile{
+                color: $Dark-Blue;
+            }
+
+            &:hover{
+                color: $Dark-Blue;
+            }
+        }
+    }
+
+    button{
+        @include Mobile{
+            display: none;
+        }
+
+    }
+
+    .menuIcon{
+        display: none;
+
+        @include Mobile{
+            display: block;
         }
     }
 }

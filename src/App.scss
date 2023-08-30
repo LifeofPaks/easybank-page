@@ -9,6 +9,8 @@
 
 body{
   font-family: 'Public Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
 
   &::-webkit-scrollbar{
     display: none;
@@ -20,6 +22,11 @@ button{
   outline: none;
   border: none;
   background: transparent;
+  transition: .3s;
+
+  &:hover{
+    transform: scale(1.05);
+  }
 
   &.primaryBtn{
     border-radius: 50px;
