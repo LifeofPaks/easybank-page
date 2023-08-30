@@ -1,0 +1,47 @@
+@import '../../styles/Responsive.scss';
+@import '../../styles/Variables.scss';
+
+.hero{
+    padding-inline: 10rem;
+    display: flex;
+    align-items: center;
+    background: $Light-Grayish-Blue;
+    gap: 5rem;
+    overflow-x: hidden;
+    position: absolute;
+    top: -5%;
+
+    .left{
+
+        h1{
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: $Dark-Blue;
+            width: 500px;
+            margin-bottom: 2rem;
+        }
+        p{
+            width: 400px;
+            color: $Grayish-Blue;
+            line-height: 25px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .right{
+        position: relative;
+        // background-image: url(../../images/bg-intro-desktop.svg);
+
+        .heroImg{
+            transform: translateX(10%);
+            position: relative;
+            z-index: 2;
+        }
+
+        .HeroBg{
+            position: absolute;
+            top: -10%;
+            left: -20%;
+        }
+    }
+}

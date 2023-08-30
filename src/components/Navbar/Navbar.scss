@@ -1,0 +1,25 @@
+@import '../../styles/Responsive.scss';
+@import '../../styles/Variables.scss';
+
+.navbar{
+    padding-inline: 10rem;
+    background: $White;
+    padding-block: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        li{
+            color: $Grayish-Blue;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+    }
+}
